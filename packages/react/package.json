@@ -15,17 +15,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gokulraj-iaaxin/monorepo.git"
+    "url": "https://github.com/gokulraj-iaaxin/monorepo.git"
   },
   "bugs": {
-    "url": "https://github.com/barosanuemailtest/npm-practice/issues"
+    "url": "https://github.com/gokulraj-iaaxin/monorepo/issues"
   },
   "homepage": "",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@monorepo/core": "workspace:*",
+    "@monorepo/core": "*",
     "react": "^18 || ^19"
   },
   "peerDependencies": {
