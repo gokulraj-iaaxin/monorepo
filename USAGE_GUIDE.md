@@ -6,8 +6,8 @@
 
 In your monorepo directory:
 ```bash
-pnpm install
-pnpm run build
+npm install
+npm run build
 ```
 
 This will:
@@ -28,7 +28,7 @@ git push
 
 In your Vite React app directory:
 ```bash
-pnpm add git+https://github.com/gokulraj-iaaxin/monorepo.git#packages/react
+npm install git+https://github.com/gokulraj-iaaxin/monorepo.git#packages/react
 ```
 
 **✅ The `core` package will be automatically installed** because it's listed as a dependency in `@monorepo/react/package.json`.
@@ -106,17 +106,17 @@ function MyComponent() {
 **Solution:** Make sure you've built the packages and the `dist` folders exist:
 ```bash
 cd monorepo
-pnpm run build
+npm run build
 ```
 
 ### Issue: "Cannot find module 'core'"
 
 **Solution:** The `core` package should install automatically. If not:
 1. Check that `packages/react/package.json` has `"core": "*"` in dependencies
-2. Try deleting `node_modules` and your lockfile (e.g., `pnpm-lock.yaml`) in your Vite app, then reinstall:
+2. Try deleting `node_modules` and `package-lock.json` in your Vite app, then reinstall:
    ```bash
-   rm -rf node_modules pnpm-lock.yaml
-   pnpm install
+   rm -rf node_modules package-lock.json
+   npm install
    ```
 
 ### Issue: TypeScript errors
@@ -132,23 +132,23 @@ If you're developing both the monorepo and your Vite app locally:
 
 1. **In monorepo:**
    ```bash
-   pnpm run build
+   npm run build
    cd packages/core
-   pnpm link
+   npm link
    cd ../react
-   pnpm link
+   npm link
    ```
 
 2. **In your Vite app:**
    ```bash
-   pnpm link @monorepo/react
-   pnpm link core
+   npm link @monorepo/react
+   npm link @monorepo/core
    ```
 
 3. **When you make changes to the monorepo:**
    ```bash
    cd monorepo
-   pnpm run build
+   npm run build
    # Changes will be reflected in your Vite app
    ```
 
@@ -158,13 +158,13 @@ If you want to publish to npm instead of using git:
 
 1. **Build packages:**
    ```bash
-   pnpm run build
+   npm run build
    ```
 
 2. **Publish core first:**
    ```bash
    cd packages/core
-   pnpm publish
+   npm publish
    ```
 
 3. **Update react package.json to reference published core version:**
@@ -177,18 +177,18 @@ If you want to publish to npm instead of using git:
 4. **Publish react:**
    ```bash
    cd ../react
-   pnpm publish
+   npm publish
    ```
 
 5. **In your Vite app:**
    ```bash
-   pnpm add @monorepo/react
+   npm install @monorepo/react
    ```
 
 ## Summary
 
-✅ **Build once:** `pnpm run build` in monorepo  
-✅ **Install once:** `pnpm add git+...` in Vite app  
+✅ **Build once:** `npm run build` in monorepo  
+✅ **Install once:** `npm install git+...` in Vite app  
 ✅ **Core installs automatically** - no extra step needed!  
 ✅ **Use components:** `import { MyButton } from '@monorepo/react'`
 

@@ -5,16 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "pnpm run build:core && pnpm run build:react",
-    "build:core": "pnpm --filter core run build",
-    "build:react": "pnpm --filter @monorepo/react run build",
+    "build": "npm run build:core && npm run build:react",
+    "build:core": "npm run build --workspace=@monorepo/core",
+    "build:react": "npm run build --workspace=@monorepo/react",
     "dev": "tsx packages/react/src/index.ts",
     "tsc": "tsc --noEmit"
   },
   "devDependencies": {
-    "typescript": "^5.3.0",
+    "@types/node": "^20.10.0",
     "tsx": "^4.7.0",
-    "@types/node": "^20.10.0"
+    "typescript": "^5.3.0"
   },
   "repository": {
     "type": "git",
@@ -30,5 +30,7 @@
   "workspaces": [
     "packages/*"
   ],
-  "packageManager": "pnpm@9.0.0"
+  "dependencies": {
+    "link": "^2.1.1"
+  }
 }

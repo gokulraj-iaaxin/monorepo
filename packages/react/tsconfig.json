@@ -4,14 +4,15 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "composite": true,
+    "declaration": true,
+    "declarationMap": true,
     "jsx": "react-jsx",
-    "baseUrl": "..",
-    "paths": {
-      "@monorepo/core": ["core/src"]
-    }
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
+    "target": "ES2022",
+    "skipLibCheck": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["node_modules", "dist"],
+  "include": ["src"],
   "references": [
     { "path": "../core" }
   ]
