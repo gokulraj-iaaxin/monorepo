@@ -1,5 +1,5 @@
 {
-  "name": "c",
+  "name": "@monorepo/react",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
