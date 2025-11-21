@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build:core && npm run build:react",
-    "build:core": "npm run build --workspace=packages/core",
-    "build:react": "npm run build --workspace=packages/react",
+    "build": "pnpm run build:core && pnpm run build:react",
+    "build:core": "pnpm --filter core run build",
+    "build:react": "pnpm --filter @monorepo/react run build",
     "dev": "tsx packages/react/src/index.ts",
     "tsc": "tsc --noEmit"
   },
@@ -29,5 +29,6 @@
   "homepage": "https://github.com/gokulraj-iaaxin/monorepo#readme",
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "packageManager": "pnpm@9.0.0"
 }

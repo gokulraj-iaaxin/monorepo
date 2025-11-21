@@ -9,24 +9,30 @@ This monorepo contains reusable React components and core utilities.
 
 ## Building
 
+Install dependencies once:
+```bash
+pnpm install
+```
+
 Build all packages:
 ```bash
-npm run build
+pnpm run build
 ```
 
 Build individual packages:
 ```bash
-npm run build:core
-npm run build:react
+pnpm run build:core
+pnpm run build:react
 ```
 
 ## Publishing/Using in Vite React App
 
 ### Option 1: Using Git Link (Recommended for Vite React App)
 
-1. **In the monorepo, build the packages first:**
+1. **In the monorepo, install deps & build the packages first:**
    ```bash
-   npm run build
+   pnpm install
+   pnpm run build
    ```
 
 2. **Commit and push the `dist` folders to your git repository:**
@@ -48,47 +54,47 @@ npm run build:react
 ### Option 2: Using npm link (Local Development)
 
 1. **In the monorepo root, build and link:**
-   ```bash
-   npm run build
-   cd packages/react
-   npm link
-   ```
+```bash
+pnpm run build
+cd packages/react
+pnpm link
+```
 
 2. **Link core package:**
-   ```bash
-   cd ../core
-   npm link
-   ```
+```bash
+cd ../core
+pnpm link
+```
 
 3. **In your Vite React app:**
-   ```bash
-   npm link @monorepo/react
-   npm link core
-   ```
+```bash
+pnpm link @monorepo/react
+pnpm link core
+```
 
 ### Option 3: Publishing to npm
 
 1. **Build packages:**
-   ```bash
-   npm run build
-   ```
+```bash
+pnpm run build
+```
 
 2. **Publish core first:**
-   ```bash
-   cd packages/core
-   npm publish
-   ```
+```bash
+cd packages/core
+pnpm publish
+```
 
 3. **Publish react package:**
-   ```bash
-   cd ../react
-   npm publish
-   ```
+```bash
+cd ../react
+pnpm publish
+```
 
 4. **In your Vite React app:**
-   ```bash
-   npm install @monorepo/react
-   ```
+```bash
+pnpm add @monorepo/react
+```
 
 ## Usage in Vite React App
 
@@ -150,7 +156,7 @@ monorepo/
 ### Requirements
 
 - Node.js 18+
-- npm 9+ (for workspaces)
+- pnpm 9+ (for workspaces)
 
 ## Notes
 

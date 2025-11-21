@@ -1,5 +1,5 @@
 import React, { type MouseEvent, type ReactElement } from "react";
-import call  from "core";
+import call  from "@monorepo/core";
 
 const handleClick = (event?: MouseEvent<HTMLButtonElement>) => {
     event?.preventDefault();

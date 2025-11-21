@@ -16,8 +16,8 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc -b",
-    "prepublishOnly": "npm run build"
+    "build": "tsc -b --clean && tsc -b",
+    "prepublishOnly": "pnpm run build"
   },
   "repository": {
     "type": "git",
@@ -31,7 +31,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@monorepo/core": "file:../core",
+    "@monorepo/core": "workspace:*",
     "react": "^18 || ^19",
     "react-dom": "^18 || ^19"
   },
