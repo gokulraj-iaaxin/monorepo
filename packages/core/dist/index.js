@@ -4,5 +4,4 @@ const call = (message) => {
     return msg;
 };
 export default call;
-export { call };
 //# sourceMappingURL=index.js.map

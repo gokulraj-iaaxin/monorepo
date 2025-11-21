@@ -1,5 +1,5 @@
 import React from "react";
-import { call } from "core";
+import call from "core";
 const handleClick = (event) => {
     event?.preventDefault();
     alert(call("World"));

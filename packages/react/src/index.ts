@@ -1,4 +1,4 @@
-export * as UI from "./UI/button";
+export * from "./UI/button";
 
 // Default export for compatibility
 

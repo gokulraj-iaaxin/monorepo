@@ -4,6 +4,11 @@
     "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@monorepo/core": ["packages/core/src"],
+      "@monorepo/react": ["packages/react/src"]
+    },
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "react-jsx",

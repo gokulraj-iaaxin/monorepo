@@ -5,5 +5,5 @@ const call = (message?: string): string => {
 };
 
 export default call;
-export { call };
+
 
