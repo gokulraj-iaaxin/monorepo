@@ -5,19 +5,13 @@
   "main": "src/index.tsx",
   "types": "src/index.tsx",
   "type": "module",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
-  },
   "files": [
     "dist"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node ../../node_modules/typescript/bin/tsc -b --clean && node ../../node_modules/typescript/bin/tsc -b",
-    "prepublishOnly": "npm run build"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
