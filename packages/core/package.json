@@ -2,26 +2,19 @@
   "name": "@monorepo/core",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "module": "./dist/index.mjs",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
   "type": "module",
   "files": [
-    "dist"
+    "src"
   ],
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "default": "./dist/index.js"
-    }
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts",
+    "./src/*": "./src/*.ts"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc -b",
-    "prepublishOnly": "npm run build",
-    "clean": "tsc -b --clean",
-    "postinstall": "npm run build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
