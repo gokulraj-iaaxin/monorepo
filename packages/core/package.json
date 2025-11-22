@@ -13,6 +13,13 @@
     "./*": "./src/*.ts",
     "./src/*": "./src/*.ts"
   },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "src/*"
+      ]
+    }
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
