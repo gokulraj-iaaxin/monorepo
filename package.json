@@ -9,6 +9,7 @@
     "build:core": "cd packages/core && tsc",
     "build:react": "cd packages/react && tsc",
     "dev": "tsx packages/react/src/index.ts",
+    "clean": "if exist packages\\core\\dist rmdir /s /q packages\\core\\dist && if exist packages\\react\\dist rmdir /s /q packages\\react\\dist",
     "tsc": "tsc --noEmit"
   },
   "devDependencies": {

@@ -1,6 +1,7 @@
 const call = (message) => {
-    const msg = message || "Core Package";
-    console.log(msg);
+    const pac = "Core Package";
+    const msg = message || pac;
+    console.log(msg + pac);
     return msg;
 };
 export default call;
