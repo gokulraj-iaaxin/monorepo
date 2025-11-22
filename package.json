@@ -5,16 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build:core && npm run build:react",
-    "build:core": "npm run build --workspace=@monorepo/core",
+   "build": "npm run build:core && npm run build:react",
     "build:react": "npm run build --workspace=@monorepo/react",
+    "build:core": "npm run build --workspace=@monorepo/core",
     "dev": "tsx packages/react/src/index.ts",
     "tsc": "tsc --noEmit"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",
     "tsx": "^4.7.0",
-    "typescript": "^5.3.0"
+    "typescript": "^5.9.3"
   },
   "repository": {
     "type": "git",
