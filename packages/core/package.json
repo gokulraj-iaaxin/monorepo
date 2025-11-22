@@ -18,8 +18,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "prepublishOnly": "npm run build"
+    "build": "tsc -b",
+    "prepublishOnly": "npm run build",
+    "clean": "tsc -b --clean"
   },
   "repository": {
     "type": "git",

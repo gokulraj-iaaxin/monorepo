@@ -27,7 +27,7 @@
       "path": "./packages/react"
     }
   ],
-  "include": ["packages/*/src/**/*"],
+  "include": [],
   "exclude": [
     "node_modules",
     "**/dist",

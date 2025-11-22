@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-   "build": "npm run build:core && npm run build:react",
-    "build:react": "npm run build --workspace=@monorepo/react",
-    "build:core": "npm run build --workspace=@monorepo/core",
+    "build": "npm run build:react && npm run build:core",
+    "build:core": "cd packages/core && tsc",
+    "build:react": "cd packages/react && tsc",
     "dev": "tsx packages/react/src/index.ts",
     "tsc": "tsc --noEmit"
   },
