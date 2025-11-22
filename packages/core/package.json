@@ -2,7 +2,9 @@
   "name": "@monorepo/core",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.mjs",
   "type": "module",
   "files": [
     "dist"
@@ -18,7 +20,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -b",
     "prepublishOnly": "npm run build",
-    "clean": "tsc -b --clean"
+    "clean": "tsc -b --clean",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
