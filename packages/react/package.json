@@ -2,26 +2,25 @@
   "name": "@monorepo/react",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.mjs",
   "type": "module",
   "files": [
-    "src"
+    "dist"
   ],
   "exports": {
-    ".": "./src/index.ts",
-    "./*": "./src/*.ts",
-    "./src/*": "./src/*.ts"
-  },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "src/*"
-      ]
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
     }
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -b",
+    "clean": "tsc -b --clean",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -33,7 +32,7 @@
   },
   "homepage": "",
   "keywords": [],
-  "author": "Gokulraj",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "@monorepo/core": "https://gitpkg.now.sh/gokulraj-iaaxin/monorepo/packages/core?main"
