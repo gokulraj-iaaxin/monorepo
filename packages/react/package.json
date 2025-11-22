@@ -2,8 +2,8 @@
   "name": "@monorepo/react",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.tsx",
-  "types": "src/index.tsx",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
   "files": [
     "dist"
@@ -11,11 +11,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "prepare": "npm run build"
+   "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gokulraj-iaaxin/monorepo.git"
+    "url": "https://github.com/gokulraj-iaaxin/monorepo.git",
+    "directory": "packages/react"
   },
   "bugs": {
     "url": "https://github.com/gokulraj-iaaxin/monorepo/issues"
@@ -25,7 +26,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@monorepo/core": "*",
+    "@monorepo/core": "https://gitpkg.now.sh/gokulraj-iaaxin/monorepo/packages/core?main",
     "react": "^18 || ^19"
   },
   "peerDependencies": {
