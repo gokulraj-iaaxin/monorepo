@@ -33,8 +33,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@monorepo/core": "https://gitpkg.now.sh/gokulraj-iaaxin/monorepo/packages/core?main",
-    "react": "^18 || ^19"
+    "@monorepo/core": "https://gitpkg.now.sh/gokulraj-iaaxin/monorepo/packages/core?main"
   },
   "peerDependencies": {
     "react": "^18 || ^19",
