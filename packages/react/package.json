@@ -22,7 +22,8 @@
     "build": "tsc -b",
     "clean": "tsc -b --clean",
     "prepare": "npm run build",
-    "postinstall": "npm run build || true"
+    "postinstall": "npm run build || true",
+        "prepack": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -37,7 +38,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@monorepo/core": "https://gitpkg.now.sh/gokulraj-iaaxin/monorepo/packages/core?main"
+    "@monorepo/core": "github:gokulraj-iaaxin/monorepo#main:packages/core"
   },
   "peerDependencies": {
     "react": "^18 || ^19",
