@@ -8,7 +8,8 @@
   "type": "module",
   "files": [
     "dist",
-    "src"
+    "src",
+     "tsconfig.json"
   ],
   "exports": {
     ".": {
@@ -20,10 +21,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -b",
-    "clean": "tsc -b --clean",
-    "prepare": "npm run build",
-    "postinstall": "npm run build || true",
-        "prepack": "npm run build"
+    "clean": "tsc -b --clean"
   },
   "repository": {
     "type": "git",
@@ -37,9 +35,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@monorepo/core": "github:gokulraj-iaaxin/monorepo#main:packages/core"
-  },
   "peerDependencies": {
     "react": "^18 || ^19",
     "react-dom": "^18 || ^19"
