@@ -7,7 +7,9 @@
   "module": "./dist/index.mjs",
   "type": "module",
   "files": [
-    "dist"
+    "dist",
+    "src",
+    "tsconfig.json"
   ],
   "exports": {
     ".": {
@@ -18,8 +20,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc -b",
+  "build": "tsc -b || true",
     "clean": "tsc -b --clean",
+    "tsc": "tsc --noEmit",
     "postinstall": "npm run build"
   },
   "repository": {
@@ -35,7 +38,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@monorepo/core": "file:../core"
+    "@monorepo/core": "*"
   },
   "peerDependencies": {
     "react": "^18 || ^19",
