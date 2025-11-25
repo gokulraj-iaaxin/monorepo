@@ -38,7 +38,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@monorepo/core": "workspaces:*"
+    "@monorepo/core": "file:../core"
   },
   "peerDependencies": {
     "react": "^18 || ^19",
