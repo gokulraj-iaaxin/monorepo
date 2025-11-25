@@ -20,7 +20,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-   "build": "tsc -b --noEmitOnError false || echo Build completed with warnings",
+    "build": "tsc -b || echo Build completed with warnings",
     "tsc": "tsc --noEmit",
     "dev": "tsc --watch",
     "clean": "rimraf dist",
