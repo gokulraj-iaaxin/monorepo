@@ -22,7 +22,8 @@
     "build": "tsc -b",
     "clean": "tsc -b --clean",
     "prepare": "npm run build",
-    "postinstall": "npm run build || true"
+    "postinstall": "npm run build || true",
+        "prepack": "npm run build"
   },
   "repository": {
     "type": "git",
