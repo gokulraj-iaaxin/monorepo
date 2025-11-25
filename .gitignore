@@ -8,7 +8,7 @@ yarn-error.log*
 # Build outputs
 dist/
 # lib/
-# build/
+build/
 *.tsbuildinfo
 
 # OS files
