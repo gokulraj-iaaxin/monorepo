@@ -42,6 +42,7 @@ const SheetListItem: React.FC<Props> = ({ sheet, isDropPlaceholder }) => {
       key={sheet.id}
       ref={containerRef}
       onClick={() => {
+        alert(sheet.name);
         if (isDropPlaceholder) return;
         setContext((draftCtx) => {
           draftCtx.sheetScrollRecord[draftCtx.currentSheetId] = {
