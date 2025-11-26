@@ -172,6 +172,7 @@ const SheetItem: React.FC<Props> = ({ sheet, isDropPlaceholder }) => {
       }
       onClick={() => {
         if (isDropPlaceholder) return;
+        alert("Sheet switched: " + sheet.name);
         setContext((draftCtx) => {
           draftCtx.sheetScrollRecord[draftCtx.currentSheetId] = {
             scrollLeft: draftCtx.scrollLeft,
