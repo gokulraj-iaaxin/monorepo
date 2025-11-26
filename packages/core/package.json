@@ -4,12 +4,9 @@
   "description": "",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "module": "./dist/index.mjs",
   "type": "module",
   "files": [
-    "dist",
-    "src",
-    "tsconfig.json"
+    "dist"
   ],
   "exports": {
     ".": {
@@ -20,7 +17,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc -b || echo Build completed with warnings",
+    "build": "tsc -b --clean && tsc -b || echo Build completed with warnings",
     "tsc": "tsc --noEmit",
     "dev": "tsc --watch",
     "clean": "rimraf dist",

@@ -214,7 +214,7 @@ export function setCellFormat(
   //   targetSheetData = sheetmanage.buildGridData(sheet);
   // }
 
-  const cellData = targetSheetData?.[row]?.[column] || {};
+  const cellData : any= targetSheetData?.[row]?.[column] || {};
   const cfg = sheet.config || {};
 
   // 特殊格式

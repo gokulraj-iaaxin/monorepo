@@ -1,12 +1,13 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "composite": true,
+    "composite": false,
     "target": "ES2020",
     "module": "ESNext",
     "moduleResolution": "bundler",
     "outDir": "./dist",
     "rootDir": "./src",
-    "jsx": "react-jsx", 
+    "jsx": "react-jsx",
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
@@ -15,19 +16,50 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false,
     "noEmitOnError": false,
+    "strict": false,
     "baseUrl": ".",
     "paths": {
-      "@monorepo/core": ["../core/src"]
+      "@monorepo/core": [
+        "../core/src"
+      ]
     }
   },
   "include": [
-    "src/**/*"
+    "src"
   ],
   "exclude": [
     "node_modules",
     "dist"
   ],
   "references": [
-    { "path": "../core" }       
+    {
+      "path": "../core"
+    }
   ]
 }
+// {
+//   "extends": "../../tsconfig.json",
+//   "compilerOptions": {
+//     "outDir": "./dist",
+//     "rootDir": "./src",
+//     "declaration": true,
+//     "declarationMap": true,
+//     "sourceMap": true,
+//     "composite": true,
+//     "baseUrl": ".",
+//     "paths": {
+//       "@monorepo/core": ["../core/src"]
+//     }
+//   },
+//   "include": [
+//     "src/**/*"
+//   ],
+//   "exclude": [
+//     "node_modules",
+//     "dist",
+//     "**/*.css"
+//   ],
+//   "references": [
+//     { "path": "../core" }
+//   ]
+// }

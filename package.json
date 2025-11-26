@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build:react && npm run build:core",
-    "build:core": "cd packages/core && tsc",
-    "build:react": "cd packages/react && tsc",
+    "build:core": "cd packages/core && npm run build",
+    "build:react": "cd packages/react && npm run build",
     "dev": "tsx packages/react/src/index.ts",
     "clean": "if exist packages\\core\\dist rmdir /s /q packages\\core\\dist && if exist packages\\react\\dist rmdir /s /q packages\\react\\dist",
     "tsc": "tsc --noEmit"
@@ -33,7 +33,6 @@
   ],
   "private": true,
   "dependencies": {
-    "link": "^2.1.1",
      "rimraf": "^6.1.2",
     "typescript": "^5.9.3"
   }

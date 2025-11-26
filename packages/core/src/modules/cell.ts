@@ -720,7 +720,7 @@ export function updateCell(
     }
   }
 
-  let curv = flowdata[r][c];
+  let curv : any = flowdata[r][c];
 
   // ctx.old value for hook function
   const oldValue = _.cloneDeep(curv);
